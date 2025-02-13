@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import axios from 'axios';
 
 export function saveImage(url: string, filePath: string): Promise<void> {
   return new Promise((resolve, reject) => {
