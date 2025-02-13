@@ -2,6 +2,7 @@ import { getBingWallpaper } from './bing';
 import { saveImage } from './utils';
 import { promises as fsPromises } from 'fs';
 import path from 'path';
+import fs from 'fs';
 import * as dotenv from 'dotenv';
 dotenv.config();
 
@@ -24,15 +25,31 @@ async function downloadWallpaper() {
   }
 }
 
+/**
+ * 
+ * @param date '20250213'
+ * @returns 
+ */
 function getFilePath(date: string): string {
-  const dateObj = new Date(date);
-  const year = dateObj.getFullYear();
-  const month = String(dateObj.getMonth() + 1).padStart(2, '0');
-  const day = String(dateObj.getDate()).padStart(2, '0');
+  const year = date.slice(0, 4);
+  const month = date.slice(4, 6);
+  const day = date.slice(6, 8);
+  const dateObj = new Date(`${year}-${month}-${day}`);
+  if (isNaN(dateObj.getTime())) {
+    throw new Error(`Invalid date format: ${date}`);
+  }
   const formattedDate = `${year}-${month}-${day}`;
   const wallpapersPath = process.env.WALLPAPERS_PATH || '../public/wallpapers';
   const yearFolderPath = path.resolve(__dirname, wallpapersPath, `${year}`);
   const monthFolderPath = path.join(yearFolderPath, `${month}`);
+
+  if (!fs.existsSync(yearFolderPath)) {
+    fs.mkdirSync(yearFolderPath, { recursive: true });
+  }
+  if (!fs.existsSync(monthFolderPath)) {
+    fs.mkdirSync(monthFolderPath, { recursive: true });
+  }
+
   return path.join(monthFolderPath, `${formattedDate}.jpg`);
 }
 
