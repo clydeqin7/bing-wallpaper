@@ -1,5 +1,4 @@
 import { getBingWallpaper } from './bing';
-import { saveImage } from './utils';
 import { promises as fsPromises } from 'fs';
 import path from 'path';
 import fs from 'fs';
@@ -9,13 +8,11 @@ dotenv.config();
 async function downloadWallpaper() {
   try {
     const wallpaper = await getBingWallpaper();
-    const filePath = getFilePath(wallpaper.date);
-    if (await fileExists(filePath)) {
-      console.log(`Wallpaper for ${wallpaper.date} already exists.`);
-      return;
-    }
-    await saveImage(wallpaper.url, filePath);
-    console.log(`Wallpaper for ${wallpaper.date} downloaded successfully.`);
+    const mdFilePath = getMdFilePath(wallpaper.date);
+
+    // Update the Markdown file
+    await updateMarkdownFile(mdFilePath, wallpaper.url, wallpaper.copyright);
+    console.log(`Wallpaper for ${wallpaper.date} added to Markdown file successfully.`);
   } catch (error) {
     if (error instanceof Error) {
       console.error(`Error downloading wallpaper: ${error.message}`);
@@ -30,28 +27,64 @@ async function downloadWallpaper() {
  * @param date '20250213'
  * @returns 
  */
-function getFilePath(date: string): string {
+function getMdFilePath(date: string): string {
   const year = date.slice(0, 4);
   const month = date.slice(4, 6);
-  const day = date.slice(6, 8);
-  const dateObj = new Date(`${year}-${month}-${day}`);
-  if (isNaN(dateObj.getTime())) {
-    throw new Error(`Invalid date format: ${date}`);
-  }
-  const formattedDate = `${year}-${month}-${day}`;
+  const formattedMonth = `${year}-${month}`;
   const wallpapersPath = process.env.WALLPAPERS_PATH || '../public/wallpapers';
   const yearFolderPath = path.resolve(__dirname, wallpapersPath, `${year}`);
-  const monthFolderPath = path.join(yearFolderPath, `${month}`);
 
+  // 创建年份文件夹
   if (!fs.existsSync(yearFolderPath)) {
     fs.mkdirSync(yearFolderPath, { recursive: true });
   }
-  if (!fs.existsSync(monthFolderPath)) {
-    fs.mkdirSync(monthFolderPath, { recursive: true });
+
+  // 文件名格式为 "2025-02.md"
+  return path.join(yearFolderPath, `${formattedMonth}.md`);
+}
+
+async function updateMarkdownFile(mdFilePath: string, wallpaperUrl: string, copyright: string): Promise<void> {
+  const date = new Date();
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  const formattedDate = `${year}-${month}-${day}`;
+
+  let content = '';
+  if (await fileExists(mdFilePath)) {
+    content = await fsPromises.readFile(mdFilePath, 'utf-8');
   }
 
-  return path.join(monthFolderPath, `${formattedDate}.jpg`);
+  // 检查是否已经存在相同日期的条目
+  const existingDateRegex = new RegExp(`\\|\\s*${formattedDate}\\s*\\|`, 'm');
+  if (existingDateRegex.test(content)) {
+    console.log(`Entry for ${formattedDate} already exists. Skipping update.`);
+    return; // 如果已经存在相同日期的条目，则直接退出
+  }
+
+  // 匹配表头和分隔符行
+  const headerAndSeparatorRegex = /\|\s*Date\s*\|\s*Image\s*\|\s*Download Links\s*\|\s*\n\|[-\s]+\|[-\s]+\|[-\s]+\|/;
+  let existingContent = '';
+  const match = headerAndSeparatorRegex.exec(content);
+  if (match) {
+    // 从分隔符行之后的位置开始截取内容
+    existingContent = content.slice(match.index + match[0].length);
+  }
+
+  // 添加新的壁纸信息
+  const newEntry = `
+  ## Bing Wallpaper (${formattedDate})
+  ![](${wallpaperUrl}&w=1024) **Today**: ${copyright}
+  | Date       | Image      | Download Links    |
+  |------------|------------|-------------------|
+  | ${formattedDate} | ![Thumbnail](${wallpaperUrl}&w=384&h=216) | [2K](${wallpaperUrl}&w=2560&h=1440) [4K](${wallpaperUrl}&w=3840&h=2160) |`;
+
+  // 将新条目添加到文件顶部
+  content = newEntry + existingContent;
+
+  await fsPromises.writeFile(mdFilePath, content, 'utf-8');
 }
+
 
 async function fileExists(filePath: string): Promise<boolean> {
   try {
@@ -59,14 +92,6 @@ async function fileExists(filePath: string): Promise<boolean> {
     return true;
   } catch {
     return false;
-  }
-}
-
-async function createDirectoryIfNotExists(dirPath: string): Promise<void> {
-  try {
-    await fsPromises.access(dirPath);
-  } catch {
-    await fsPromises.mkdir(dirPath, { recursive: true });
   }
 }
 
