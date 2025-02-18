@@ -62,27 +62,37 @@ async function updateMarkdownFile(mdFilePath: string, wallpaperUrl: string, copy
     return; // 如果已经存在相同日期的条目，则直接退出
   }
 
-  // 匹配表头和分隔符行
-  const headerAndSeparatorRegex = /\|\s*Date\s*\|\s*Image\s*\|\s*Download Links\s*\|\s*\n\|[-\s]+\|[-\s]+\|[-\s]+\|/;
+  // 匹配分隔符行的位置
+  const separatorLine = "|------------|------------|-------------------|--------------|";
+  const separatorIndex = content.indexOf(separatorLine);
+
   let existingContent = '';
-  const match = headerAndSeparatorRegex.exec(content);
-  if (match) {
-    // 从分隔符行之后的位置开始截取内容
-    existingContent = content.slice(match.index + match[0].length);
+  if (separatorIndex !== -1) {
+    // 从分隔符行之后的内容开始截取
+    const nextLineIndex = content.indexOf("\n", separatorIndex);
+    if (nextLineIndex !== -1) {
+      existingContent = content.slice(nextLineIndex + 1); // 跳过分隔符行和换行符
+    }
+  } else {
+    console.log("No existing table found. Creating a new table.");
   }
 
   // 添加新的壁纸信息
   const newEntry = `
   ## Bing Wallpaper (${formattedDate})
   ![](${wallpaperUrl}&w=1024) **Today**: ${copyright}
-  | Date       | Image      | Download Links    |
-  |------------|------------|-------------------|
-  | ${formattedDate} | ![Thumbnail](${wallpaperUrl}&w=384&h=216) | [2K](${wallpaperUrl}&w=2560&h=1440) [4K](${wallpaperUrl}&w=3840&h=2160) |`;
+  | Date       | Image      | Download Links    | Copyright    |
+  |------------|------------|-------------------|--------------|
+  | ${formattedDate} | ![Thumbnail](${wallpaperUrl}&w=384&h=216) | [2K](${wallpaperUrl}&w=2560&h=1440) [4K](${wallpaperUrl}&w=3840&h=2160) | ${copyright} |
+  `;
 
   // 将新条目添加到文件顶部
   content = newEntry + existingContent;
 
+  console.log(' content newContent >>>', content)
+
   await fsPromises.writeFile(mdFilePath, content, 'utf-8');
+  console.log(`Updated Markdown file with new entry for ${formattedDate}`);
 }
 
 
