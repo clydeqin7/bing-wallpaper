@@ -89,8 +89,6 @@ async function updateMarkdownFile(mdFilePath: string, wallpaperUrl: string, copy
   // 将新条目添加到文件顶部
   content = newEntry + existingContent;
 
-  console.log(' content newContent >>>', content)
-
   await fsPromises.writeFile(mdFilePath, content, 'utf-8');
   console.log(`Updated Markdown file with new entry for ${formattedDate}`);
 }

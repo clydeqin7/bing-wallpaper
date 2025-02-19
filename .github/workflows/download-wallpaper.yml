@@ -48,6 +48,6 @@ jobs:
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
           git config --local user.name $GIT_USER_NAME
           git config --local user.email $GIT_USER_EMAIL
-          git add public/wallpapers/
+          git add public/wallpapers/.
           git commit -m "Update Bing wallpaper Markdown for $(date +'%Y-%m-%d')"
           git push
