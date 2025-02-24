@@ -135,7 +135,7 @@ async function updateMarkdownFile(mdFilePath: string): Promise<void> {
     const formattedDate = `${fullDate.slice(0, 4)}-${fullDate.slice(4, 6)}-${fullDate.slice(6, 8)}`;
 
     content += `
-    | ${formattedDate} | ![Thumbnail](${wallpaper.url}&w=384&h=216) | [2K](${wallpaper.url}&w=2560&h=1440) [4K](${wallpaper.url}&w=3840&h=2160) | ${wallpaper.copyright} |`;
+  | ${formattedDate} | ![Thumbnail](${wallpaper.url}&w=384&h=216) | [2K](${wallpaper.url}&w=2560&h=1440) [4K](${wallpaper.url}&w=3840&h=2160) | ${wallpaper.copyright} |`;
   }
 
   // 写入 Markdown 文件
