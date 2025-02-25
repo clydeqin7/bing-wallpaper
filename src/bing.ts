@@ -1,10 +1,6 @@
 import axios from 'axios';
+import { BingWallpaper } from '@/types';
 
-interface BingWallpaper {
-  url: string;
-  copyright: string;
-  date: string;
-}
 
 export async function getBingWallpaper(): Promise<BingWallpaper> {
   const url = 'https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-CN';
