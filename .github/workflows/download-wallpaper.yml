@@ -49,5 +49,5 @@ jobs:
           git config --local user.name $GIT_USER_NAME
           git config --local user.email $GIT_USER_EMAIL
           git add public/wallpapers/.
-          git commit -m "Update Bing wallpaper Markdown for $(date +'%Y-%m-%d')"
+          TZ=Asia/Shanghai git commit -m "Update Bing wallpaper Markdown for $(date +'%Y-%m-%d')"
           git push
