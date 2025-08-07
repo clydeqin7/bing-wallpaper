@@ -2,6 +2,7 @@ import { promises as fsPromises } from 'fs';
 import { fileExists, getJsonFilePath } from '../utils/file';
 import { formatDate } from '../utils/date';
 import { BingWallpaper } from '../types';
+import { markdownTable } from 'markdown-table';
 
 /**
  * 更新 Markdown 文件
@@ -31,17 +32,23 @@ export async function updateMarkdownFile(mdFilePath: string): Promise<void> {
   let content = '';
 
   // 添加最新壁纸信息
-  content += `\n  ## Bing Wallpaper (${formattedDate})\n  ![Wallpaper](${latestWallpaper.url}&w=1024) **Today**: ${latestWallpaper.copyright}\n  \n\n`;
+  content += `\n## Bing Wallpaper (${formattedDate})\n![Wallpaper](${latestWallpaper.url}&w=1024) **Today**: ${latestWallpaper.copyright}\n\n`;
 
-  // 添加表头
-  content += `\n  | Date       | Image      | Download Links    | Copyright    |\n  |------------|------------|-------------------|--------------|`;
-
-  // 遍历排序后的日期，生成 Markdown 条目
-  for (const fullDate of sortedDates) {
-    const wallpaper = wallpapersInfo[fullDate];
-    const formattedDate = formatDate(fullDate);
-    content += `\n  | ${formattedDate} | ![Thumbnail](${wallpaper.url}&w=384&h=216) | [2K](${wallpaper.url}&w=2560&h=1440) [4K](${wallpaper.url}&w=3840&h=2160) | ${wallpaper.copyright} |`;
-  }
+  // 构建表格数据
+  const tableData = [
+    ['Date', 'Image', 'Download Links', 'Copyright'],
+    ...sortedDates.map(fullDate => {
+      const wallpaper = wallpapersInfo[fullDate];
+      const formattedDate = formatDate(fullDate);
+      return [
+        formattedDate,
+        `![Thumbnail](${wallpaper.url}&w=384&h=216)`,
+        `[2K](${wallpaper.url}&w=2560&h=1440) [4K](${wallpaper.url}&w=3840&h=2160)`,
+        wallpaper.copyright
+      ];
+    })
+  ];
+  content += markdownTable(tableData, { align: ['c', 'c', 'c', 'l'] });
 
   // 写入 Markdown 文件
   await fsPromises.writeFile(mdFilePath, content, 'utf-8');

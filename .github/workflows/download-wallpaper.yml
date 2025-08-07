@@ -25,10 +25,10 @@ jobs:
           echo "Installing dependencies..."
           pnpm install
 
-      - name: Run Bing Wallpaper Script (ts-node)
+      - name: Run Bing Wallpaper Script (tsx)
         run: |
-          echo "Running Bing Wallpaper script with ts-node..."
-          npx ts-node src/index.ts
+          echo "Running Bing Wallpaper script with tsx..."
+          npx tsx src/index.ts
 
       - name: Format public folder with Prettier
         run: |
