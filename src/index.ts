@@ -3,6 +3,7 @@ import * as dotenv from 'dotenv';
 import { getMdFilePath } from './utils/file';
 import { saveWallpaperInfo } from './services/storage';
 import { updateMarkdownFile } from './services/markdown';
+import { generateReadme } from './services/readme';
 dotenv.config();
 
 async function downloadWallpaper() {
@@ -21,6 +22,9 @@ async function downloadWallpaper() {
     const mdFilePath = getMdFilePath(date); // Call to utility
     await updateMarkdownFile(mdFilePath); // Call to service
     console.log(`Wallpaper for ${date} added to Markdown file successfully.`);
+
+    // 生成/更新 README.md
+    await generateReadme();
   } catch (error) {
     if (error instanceof Error) {
       console.error(`Error downloading wallpaper: ${error.message}`);
