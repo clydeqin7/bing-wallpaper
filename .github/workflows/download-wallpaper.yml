@@ -25,31 +25,28 @@ jobs:
           echo "Installing dependencies..."
           pnpm install
 
-      - name: Compile TypeScript
+      - name: Run Bing Wallpaper Script (ts-node)
         run: |
-          echo "Compiling TypeScript..."
-          npx tsc
+          echo "Running Bing Wallpaper script with ts-node..."
+          npx ts-node src/index.ts
 
-      - name: Update Bing Wallpaper Markdown
+      - name: Format public folder with Prettier
         run: |
-          echo "Updating Bing Wallpaper Markdown..."
-          if ! node dist/index.js; then
-            echo "Failed to update Bing wallpaper Markdown"
-            exit 1
-          fi
+          echo "Formatting public folder with Prettier..."
+          npx prettier --write "public/**/*.md" "public/**/*.json"
 
-      - name: Commit and push Markdown file
+      - name: Commit and push Markdown/JSON file
         env:
           GIT_USER_NAME: ${{ secrets.GIT_USER_NAME }}
           GIT_USER_EMAIL: ${{ secrets.GIT_USER_EMAIL }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "Committing and pushing Markdown file..."
+          echo "Committing and pushing Markdown/JSON file..."
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
           git config --local user.name $GIT_USER_NAME
           git config --local user.email $GIT_USER_EMAIL
           git add public/wallpapers/.
           # 设置时区为北京时间（UTC+8）
           export TZ=Asia/Shanghai
-          git commit -m "Update Bing wallpaper Markdown for $(date +'%Y-%m-%d')"
+          git commit -m "Update Bing wallpaper Markdown for $(date +'%Y-%m-%d')" || echo "No changes to commit"
           git push
