@@ -5,6 +5,14 @@ on:
     - cron: "0 17 * * *" # 北京时间凌晨1点触发（UTC+8）
   workflow_dispatch: # 手动触发
 
+permissions:
+  contents: write
+
+# 同一时间只跑一个实例，避免手动触发与定时任务互相覆盖提交
+concurrency:
+  group: download-bing-wallpaper
+  cancel-in-progress: false
+
 jobs:
   update-markdown:
     runs-on: ubuntu-latest
@@ -30,12 +38,12 @@ jobs:
       - name: Run Bing Wallpaper Script (tsx)
         run: |
           echo "Running Bing Wallpaper script with tsx..."
-          npx tsx src/index.ts
+          pnpm exec tsx src/index.ts
 
       - name: Format public folder with Prettier
         run: |
           echo "Formatting public folder with Prettier..."
-          npx prettier --write "public/**/*.md" "public/**/*.json"
+          pnpm exec prettier --write "public/**/*.md" "public/**/*.json" "README.md"
 
       - name: Commit and push Markdown/JSON file
         env:
@@ -45,10 +53,22 @@ jobs:
         run: |
           echo "Committing and pushing Markdown/JSON file..."
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
-          git config --local user.name $GIT_USER_NAME
-          git config --local user.email $GIT_USER_EMAIL
+          git config --local user.name "${GIT_USER_NAME:-github-actions[bot]}"
+          git config --local user.email "${GIT_USER_EMAIL:-41898282+github-actions[bot]@users.noreply.github.com}"
           git add README.md public/wallpapers/
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
           # 设置时区为北京时间（UTC+8）
           export TZ=Asia/Shanghai
-          git commit -m "Update Bing wallpaper Markdown for $(date +'%Y-%m-%d')" || echo "No changes to commit"
-          git push
+          git commit -m "Update Bing wallpaper Markdown for $(date +'%Y-%m-%d')"
+
+          # 远端有新提交时（例如另一个实例刚推送）先 rebase 再重试一次
+          git push || {
+            echo "Push rejected, rebasing and retrying..."
+            git pull --rebase --autostash origin main
+            git push
+          }
