@@ -2,11 +2,11 @@
 
 > 自动抓取并归档 Bing 每日壁纸
 
-## 今日壁纸 (2026-10-31)
+## 今日壁纸 (2026-11-01)
 
-![Wallpaper](https://cn.bing.com/th?id=OHR.FrankfurtHalloween_ZH-CN5998782698_UHD.jpg&w=1024)
+![Wallpaper](https://cn.bing.com/th?id=OHR.SchwarzwaldAutumn_ZH-CN6323627599_UHD.jpg&w=1024)
 
-圣巴尔多禄茂教堂，法兰克福，德国 (© AlxeyPnferov/Getty Images)
+黑森林，巴登-符腾堡州，德国 (© Britus/Getty Images)
 
 ---
 
@@ -22,6 +22,7 @@
   - [2026-07](public/wallpapers/2026/2026-07.md)
   - [2026-08](public/wallpapers/2026/2026-08.md)
   - [2026-10](public/wallpapers/2026/2026-10.md)
+  - [2026-11](public/wallpapers/2026/2026-11.md)
 - 2025
   - [2025-02](public/wallpapers/2025/2025-02.md)
   - [2025-03](public/wallpapers/2025/2025-03.md)
