@@ -2,16 +2,26 @@
 
 > 自动抓取并归档 Bing 每日壁纸
 
-## 今日壁纸 (2025-08-07)
+## 今日壁纸 (2026-10-31)
 
-![Wallpaper](https://cn.bing.com/th?id=OHR.GasparillaLight_ZH-CN6855683859_UHD.jpg&w=1024)
+![Wallpaper](https://cn.bing.com/th?id=OHR.FrankfurtHalloween_ZH-CN5998782698_UHD.jpg&w=1024)
 
-加斯帕里拉岛灯塔后导标灯, 博卡格兰德, 佛罗里达州, 美国 (© Wiltser/Getty Images)
+圣巴尔多禄茂教堂，法兰克福，德国 (© AlxeyPnferov/Getty Images)
 
 ---
 
 ## 年度归档
 
+- 2026
+  - [2026-01](public/wallpapers/2026/2026-01.md)
+  - [2026-02](public/wallpapers/2026/2026-02.md)
+  - [2026-03](public/wallpapers/2026/2026-03.md)
+  - [2026-04](public/wallpapers/2026/2026-04.md)
+  - [2026-05](public/wallpapers/2026/2026-05.md)
+  - [2026-06](public/wallpapers/2026/2026-06.md)
+  - [2026-07](public/wallpapers/2026/2026-07.md)
+  - [2026-08](public/wallpapers/2026/2026-08.md)
+  - [2026-10](public/wallpapers/2026/2026-10.md)
 - 2025
   - [2025-02](public/wallpapers/2025/2025-02.md)
   - [2025-03](public/wallpapers/2025/2025-03.md)
@@ -20,5 +30,9 @@
   - [2025-06](public/wallpapers/2025/2025-06.md)
   - [2025-07](public/wallpapers/2025/2025-07.md)
   - [2025-08](public/wallpapers/2025/2025-08.md)
+  - [2025-09](public/wallpapers/2025/2025-09.md)
+  - [2025-10](public/wallpapers/2025/2025-10.md)
+  - [2025-11](public/wallpapers/2025/2025-11.md)
+  - [2025-12](public/wallpapers/2025/2025-12.md)
 
-> 更多月份请在 public/wallpapers/ 目录下查看
+> 更多壁纸请在 public/wallpapers/ 目录下查看
