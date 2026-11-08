@@ -2,11 +2,11 @@
 
 > 自动抓取并归档 Bing 每日壁纸
 
-## 今日壁纸 (2026-11-08)
+## 今日壁纸 (2026-11-09)
 
-![Wallpaper](https://cn.bing.com/th?id=OHR.DiwaliLamps_ZH-CN2462894749_UHD.jpg&w=1024)
+![Wallpaper](https://cn.bing.com/th?id=OHR.TrianaSpain_ZH-CN6329291776_UHD.jpg&w=1024)
 
-排灯节灯笼，孟买，马哈拉施特拉邦，印度 (© Dinodia Photo/Getty Images)
+特里亚纳历史街区，塞维利亚，西班牙 (© Andrzej Rostek/Getty Images)
 
 ---
 
