@@ -2,11 +2,11 @@
 
 > 自动抓取并归档 Bing 每日壁纸
 
-## 今日壁纸 (2026-11-10)
+## 今日壁纸 (2026-11-11)
 
-![Wallpaper](https://cn.bing.com/th?id=OHR.RoseIsland_ZH-CN6477140814_UHD.jpg&w=1024)
+![Wallpaper](https://cn.bing.com/th?id=OHR.Atlantica_ZH-CN6593995386_UHD.jpg&w=1024)
 
-玫瑰岛航拍图，巴哈马 (© Abstract Aerial Art/Getty Images)
+大西洋森林，巴西 (© FG Trade/Getty Images)
 
 ---
 
