@@ -2,11 +2,11 @@
 
 > 自动抓取并归档 Bing 每日壁纸
 
-## 今日壁纸 (2026-11-09)
+## 今日壁纸 (2026-11-10)
 
-![Wallpaper](https://cn.bing.com/th?id=OHR.TrianaSpain_ZH-CN6329291776_UHD.jpg&w=1024)
+![Wallpaper](https://cn.bing.com/th?id=OHR.RoseIsland_ZH-CN6477140814_UHD.jpg&w=1024)
 
-特里亚纳历史街区，塞维利亚，西班牙 (© Andrzej Rostek/Getty Images)
+玫瑰岛航拍图，巴哈马 (© Abstract Aerial Art/Getty Images)
 
 ---
 
