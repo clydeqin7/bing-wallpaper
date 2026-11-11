@@ -2,11 +2,11 @@
 
 > 自动抓取并归档 Bing 每日壁纸
 
-## 今日壁纸 (2026-11-11)
+## 今日壁纸 (2026-11-12)
 
-![Wallpaper](https://cn.bing.com/th?id=OHR.Atlantica_ZH-CN6593995386_UHD.jpg&w=1024)
+![Wallpaper](https://cn.bing.com/th?id=OHR.NorthWindow_ZH-CN6734579353_UHD.jpg&w=1024)
 
-大西洋森林，巴西 (© FG Trade/Getty Images)
+北窗，拱门国家公园，莫阿布，犹他州，美国 (© lightphoto/Getty Images)
 
 ---
 
