@@ -2,11 +2,11 @@
 
 > 自动抓取并归档 Bing 每日壁纸
 
-## 今日壁纸 (2026-11-12)
+## 今日壁纸 (2026-11-13)
 
-![Wallpaper](https://cn.bing.com/th?id=OHR.NorthWindow_ZH-CN6734579353_UHD.jpg&w=1024)
+![Wallpaper](https://cn.bing.com/th?id=OHR.AbrahamCanada_ZH-CN0344365912_UHD.jpg&w=1024)
 
-北窗，拱门国家公园，莫阿布，犹他州，美国 (© lightphoto/Getty Images)
+亚伯拉罕湖，艾伯塔省，加拿大 (© Guang Cao/Getty Images)
 
 ---
 
