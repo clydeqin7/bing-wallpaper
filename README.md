@@ -2,11 +2,11 @@
 
 > 自动抓取并归档 Bing 每日壁纸
 
-## 今日壁纸 (2026-11-13)
+## 今日壁纸 (2026-11-14)
 
-![Wallpaper](https://cn.bing.com/th?id=OHR.AbrahamCanada_ZH-CN0344365912_UHD.jpg&w=1024)
+![Wallpaper](https://cn.bing.com/th?id=OHR.BlueHK_ZH-CN1382345392_UHD.jpg&w=1024)
 
-亚伯拉罕湖，艾伯塔省，加拿大 (© Guang Cao/Getty Images)
+中国香港维多利亚港 (© Juan Romero/Cavan Images)
 
 ---
 
