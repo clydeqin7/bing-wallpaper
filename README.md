@@ -2,11 +2,11 @@
 
 > 自动抓取并归档 Bing 每日壁纸
 
-## 今日壁纸 (2026-11-14)
+## 今日壁纸 (2026-11-15)
 
-![Wallpaper](https://cn.bing.com/th?id=OHR.BlueHK_ZH-CN1382345392_UHD.jpg&w=1024)
+![Wallpaper](https://cn.bing.com/th?id=OHR.FirstFrost_ZH-CN2219029557_UHD.jpg&w=1024)
 
-中国香港维多利亚港 (© Juan Romero/Cavan Images)
+覆霜的红叶杜鹃 (© avoferten/Shutterstock)
 
 ---
 
