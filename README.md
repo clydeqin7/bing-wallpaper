@@ -2,11 +2,11 @@
 
 > 自动抓取并归档 Bing 每日壁纸
 
-## 今日壁纸 (2026-11-17)
+## 今日壁纸 (2026-11-18)
 
-![Wallpaper](https://cn.bing.com/th?id=OHR.TrailCedars_ZH-CN2670680285_UHD.jpg&w=1024)
+![Wallpaper](https://cn.bing.com/th?id=OHR.BarnOwlsUnite_ZH-CN2930153291_UHD.jpg&w=1024)
 
-雪松林步道，冰川国家公园，蒙大拿州，美国 (© DBushue Photography/Getty Images)
+一对仓鸮 (© Zahoor Salmi/Getty Images)
 
 ---
 
