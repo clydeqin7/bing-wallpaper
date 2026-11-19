@@ -2,11 +2,11 @@
 
 > 自动抓取并归档 Bing 每日壁纸
 
-## 今日壁纸 (2026-11-19)
+## 今日壁纸 (2026-11-20)
 
-![Wallpaper](https://cn.bing.com/th?id=OHR.KnowledgeSculpture_ZH-CN3168800853_UHD.jpg&w=1024)
+![Wallpaper](https://cn.bing.com/th?id=OHR.Megaptera_ZH-CN3361807823_UHD.jpg&w=1024)
 
-雕塑《知识之躯》，由豪梅·普兰萨创作，位于德国法兰克福的法兰克福歌德大学 (© Todamo/Shutterstock)
+正在潜水的座头鲸，挪威北部特罗姆斯的克瓦尔岛 (© Espen Bergersen/Minden Pictures)
 
 ---
 
