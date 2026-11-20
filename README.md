@@ -2,11 +2,11 @@
 
 > 自动抓取并归档 Bing 每日壁纸
 
-## 今日壁纸 (2026-11-20)
+## 今日壁纸 (2026-11-21)
 
-![Wallpaper](https://cn.bing.com/th?id=OHR.Megaptera_ZH-CN3361807823_UHD.jpg&w=1024)
+![Wallpaper](https://cn.bing.com/th?id=OHR.RedNice_ZH-CN3518429866_UHD.jpg&w=1024)
 
-正在潜水的座头鲸，挪威北部特罗姆斯的克瓦尔岛 (© Espen Bergersen/Minden Pictures)
+法国普罗旺斯-阿尔卑斯-蔚蓝海岸大区尼斯 (© Siripong Kaewla-iad/Getty Images)
 
 ---
 
