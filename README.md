@@ -2,11 +2,11 @@
 
 > 自动抓取并归档 Bing 每日壁纸
 
-## 今日壁纸 (2026-11-21)
+## 今日壁纸 (2026-11-22)
 
-![Wallpaper](https://cn.bing.com/th?id=OHR.RedNice_ZH-CN3518429866_UHD.jpg&w=1024)
+![Wallpaper](https://cn.bing.com/th?id=OHR.JustaHermitage_ZH-CN3751022621_UHD.jpg&w=1024)
 
-法国普罗旺斯-阿尔卑斯-蔚蓝海岸大区尼斯 (© Siripong Kaewla-iad/Getty Images)
+西班牙坎塔布里亚自治区的圣胡斯塔隐修院与小教堂 (© Tramont_ana/Getty Images)
 
 ---
 
