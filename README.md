@@ -2,11 +2,11 @@
 
 > 自动抓取并归档 Bing 每日壁纸
 
-## 今日壁纸 (2026-11-22)
+## 今日壁纸 (2026-11-23)
 
-![Wallpaper](https://cn.bing.com/th?id=OHR.JustaHermitage_ZH-CN3751022621_UHD.jpg&w=1024)
+![Wallpaper](https://cn.bing.com/th?id=OHR.FibonacciFern_ZH-CN3882237848_UHD.jpg&w=1024)
 
-西班牙坎塔布里亚自治区的圣胡斯塔隐修院与小教堂 (© Tramont_ana/Getty Images)
+蕨类植物的卷曲嫩叶 (© Reza Saputra/Getty Images)
 
 ---
 
