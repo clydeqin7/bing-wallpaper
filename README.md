@@ -2,11 +2,11 @@
 
 > 自动抓取并归档 Bing 每日壁纸
 
-## 今日壁纸 (2026-11-24)
+## 今日壁纸 (2026-11-25)
 
-![Wallpaper](https://cn.bing.com/th?id=OHR.CairngormsSquirrel_ZH-CN0941302869_UHD.jpg&w=1024)
+![Wallpaper](https://cn.bing.com/th?id=OHR.SunsetPoint_ZH-CN5737034685_UHD.jpg&w=1024)
 
-红松鼠，凯恩戈姆斯国家公园，苏格兰高地 (© Scotland: The Big Picture/Minden Pictures)
+日落观景点，布莱斯峡谷国家公园，犹他州 (© Colin D. Young/Alamy)
 
 ---
 
