@@ -2,11 +2,11 @@
 
 > 自动抓取并归档 Bing 每日壁纸
 
-## 今日壁纸 (2026-11-25)
+## 今日壁纸 (2026-11-26)
 
-![Wallpaper](https://cn.bing.com/th?id=OHR.SunsetPoint_ZH-CN5737034685_UHD.jpg&w=1024)
+![Wallpaper](https://cn.bing.com/th?id=OHR.RFHilo_ZH-CN5962114314_UHD.jpg&w=1024)
 
-日落观景点，布莱斯峡谷国家公园，犹他州 (© Colin D. Young/Alamy)
+怀卢库河上的彩虹瀑布，希洛市，夏威夷州，美国 (© Peter Unger/Getty Images)
 
 ---
 
