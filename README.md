@@ -2,11 +2,11 @@
 
 > 自动抓取并归档 Bing 每日壁纸
 
-## 今日壁纸 (2026-11-26)
+## 今日壁纸 (2026-11-27)
 
-![Wallpaper](https://cn.bing.com/th?id=OHR.RFHilo_ZH-CN5962114314_UHD.jpg&w=1024)
+![Wallpaper](https://cn.bing.com/th?id=OHR.FaceCanyon_ZH-CN9505064248_UHD.jpg&w=1024)
 
-怀卢库河上的彩虹瀑布，希洛市，夏威夷州，美国 (© Peter Unger/Getty Images)
+夕阳下的孤峰，鲍威尔湖脸峡谷，犹他州，美国 (© Jeff Foott/Minden)
 
 ---
 
