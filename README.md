@@ -2,11 +2,11 @@
 
 > 自动抓取并归档 Bing 每日壁纸
 
-## 今日壁纸 (2026-11-27)
+## 今日壁纸 (2026-11-28)
 
-![Wallpaper](https://cn.bing.com/th?id=OHR.FaceCanyon_ZH-CN9505064248_UHD.jpg&w=1024)
+![Wallpaper](https://cn.bing.com/th?id=OHR.VltavaPrague_ZH-CN9898139716_UHD.jpg&w=1024)
 
-夕阳下的孤峰，鲍威尔湖脸峡谷，犹他州，美国 (© Jeff Foott/Minden)
+捷克布拉格老城区与伏尔塔瓦河 (© Lara_Uhryn/Getty Images)
 
 ---
 
